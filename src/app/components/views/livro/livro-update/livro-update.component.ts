@@ -11,7 +11,7 @@ import { LivroService } from '../livro.service';
 })
 export class LivroUpdateComponent implements OnInit {
 
-  id_cat: String = ''
+  id_cat: String = "";
 
   livro: Livro = {
     id: '',
@@ -33,15 +33,15 @@ export class LivroUpdateComponent implements OnInit {
   ngOnInit(): void {
     this.id_cat = this.route.snapshot.paramMap.get('id_cat')!;
     this.livro.id = this.route.snapshot.paramMap.get('id')!;
-    this.finById()
+    this.findById()
   }
 
   cancel(): void {
     this.router.navigate([`categorias/${this.id_cat}/livros`]);
   }
 
-  finById(): void {
-    this.service.finById(this.livro.id!).subscribe((resposta) => {
+  findById(): void {
+    this.service.findById(this.livro.id!).subscribe((resposta) => {
       this.livro = resposta
     })
   }
