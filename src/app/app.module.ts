@@ -31,11 +31,6 @@ import { LivroUpdateComponent } from './components/views/livro/livro-update/livr
 import { LivroDeleteComponent } from './components/views/livro/livro-delete/livro-delete.component';
 import { LivroReadComponent } from './components/views/livro/livro-read/livro-read.component';
 
-
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
